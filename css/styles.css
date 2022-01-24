@@ -4,6 +4,7 @@
     --text-light-color: #757575;
     --background-dark-box-color: #2f303a;
     --background-light-gray-color: #f5f4fa;
+    --icon-color: #afb1b8;
     --main-font: 'Roboto', sans-serif;
 }
 
@@ -218,13 +219,26 @@ ul {
 }
 
 .features-list .item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
 .features-list .item + .item {
     margin-left: 30px;
 }
-.features-item-title {
-    margin: 0;
+
+.features-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--background-light-gray-color);
+}
+
+.features-title {
+    margin: 0 0 0 0;
 
     font-weight: 700;
     font-size: 14px;
@@ -265,7 +279,8 @@ ul {
 /* = (Чем мы занимаемся) & (Команда) = */
 
 .doing-title,
-.team-title {
+.team-title,
+.clients-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.87;
@@ -333,6 +348,87 @@ ul {
     /* text-align: center; */
 }
 
+/* Социальные ссылки */
+
+.social-links {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.social-links .social-item + .social-item {
+    margin-left: 10px;
+}
+
+.social-link {
+    display: block;
+    max-width: 44px;
+    max-height: 44px;
+
+    padding: 12px;
+
+    border-radius: 50%;
+}
+
+.social-link svg {
+    fill: currentColor;
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.team-social-link {
+    color: var(--icon-color);
+    background-color: transparent;
+}
+
+.footer-social-link {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* = Постоянные клиенты = */
+
+.clients-list {
+    display: flex;
+    margin-top: 50px;
+}
+
+.clients-list .item + .item {
+    margin-left: 30px;
+}
+
+.clients-link {
+    display: block;
+
+    max-width: 170px;
+    max-height: 92px;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    color: var(--icon-color);
+    background-color: transparent;
+
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    text-align: center;
+}
+
+.clients-link svg {
+    fill: currentColor;
+}
+
+.clients-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /* = Footer = */
 
 .footer-section {
@@ -342,6 +438,29 @@ ul {
 .footer-section {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-contain {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-join {
+    margin-left: 70px;
+}
+
+.footer-join .social-links {
+    margin-top: 20px;
+}
+.join-text {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 .footer-address {
@@ -484,4 +603,54 @@ ul {
     /* identical to box height, 30px or 187% */
     letter-spacing: 0.03em;
     color: var(--text-light-color);
+}
+
+/* ==== Раздел для тренировок ====  */
+.temp-container {
+    display: flex;
+}
+
+.temp-item {
+    margin-left: 10px;
+}
+.temp-button {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid tomato;
+    /* border-radius: 50%; */
+    color: yellow;
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+.temp-link {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid tomato;
+    border-radius: 50%;
+    color: yellow;
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+.temp-icon {
+    width: 60px;
+    height: 60px;
+    fill: currentColor;
+}
+
+.temp-icon-link {
+    fill: currentColor;
+}
+
+.temp-button:hover,
+.temp-link:hover {
+    color: yellowgreen;
+    background-color: yellow;
 }
