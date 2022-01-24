@@ -138,13 +138,22 @@ ul {
     color: var(--accent-color);
 }
 
-.link-nav {
+.links-nav {
     display: flex;
     margin-left: auto;
 }
 
-.link-nav .item + .item {
+.links-nav .item + .item {
     margin-left: 50px;
+}
+.link-nav {
+    display: inline-flex;
+    align-items: center;
+}
+
+.link-nav-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* == Main == */
@@ -227,18 +236,20 @@ ul {
 }
 
 .features-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    margin-bottom: 30px;
+    max-width: 270px;
+    max-height: 120px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+
     border-radius: 4px;
     background-color: var(--background-light-gray-color);
 }
 
 .features-title {
-    margin: 0 0 0 0;
+    margin-top: 30px;
 
     font-weight: 700;
     font-size: 14px;
