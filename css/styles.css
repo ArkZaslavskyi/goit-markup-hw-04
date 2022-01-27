@@ -161,9 +161,13 @@ ul {
 /* = Hero = */
 
 .hero-section {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
     padding-top: 200px;
     padding-bottom: 200px;
-    text-align: center;
+
     background-image: linear-gradient(
             to right,
             rgba(47, 48, 58, 0.4),
@@ -173,6 +177,8 @@ ul {
     background-size: 1600px;
     background-repeat: no-repeat;
     background-position: center;
+
+    text-align: center;
 }
 
 .hero-title {
@@ -243,13 +249,11 @@ ul {
 }
 
 .features-icon {
-    max-width: 270px;
-    max-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
+    height: 120px;
 
     border-radius: 4px;
     background-color: var(--background-light-gray-color);
@@ -301,8 +305,8 @@ ul {
 .clients-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.87;
-    /* 42px or 187% */
+    line-height: 1.17;
+    /* 42px or 117% */
     letter-spacing: 0.03em;
     color: var(--text-dark-color);
     text-align: center;
@@ -379,11 +383,11 @@ ul {
 }
 
 .social-link {
-    display: block;
-    max-width: 44px;
-    max-height: 44px;
-
-    padding: 12px;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
 
     border-radius: 50%;
 }
@@ -392,7 +396,8 @@ ul {
     fill: currentColor;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     background-color: var(--accent-color);
     color: #ffffff;
 }
@@ -419,15 +424,12 @@ ul {
 }
 
 .clients-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    max-width: 170px;
-    max-height: 92px;
-
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
+    width: 170px;
+    height: 92px;
 
     color: var(--icon-color);
     background-color: transparent;
@@ -442,7 +444,8 @@ ul {
     fill: currentColor;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -565,11 +568,11 @@ ul {
 }
 
 .projects-list .item {
-    --grid-gap: 30px;
-    --grid-columns: 3;
+    --projects-grid-gap: 30px;
+    --projects-grid-columns: 3;
     flex-basis: calc(
-        (100% - (var(--grid-columns) - 1) * var(--grid-gap)) /
-            var(--grid-columns)
+        (100% - (var(--projects-grid-columns) - 1) * var(--projects-grid-gap)) /
+            var(--projects-grid-columns)
     );
     background: #ffffff;
     /* border: 1px solid #eeeeee; */
