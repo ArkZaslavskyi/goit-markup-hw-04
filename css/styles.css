@@ -40,7 +40,7 @@ ul {
 
     padding-left: 15px;
     padding-right: 15px;
-    /* temporary outline */
+    /* = temporary outline = */
     /* outline: 2px solid tomato; */
 }
 
@@ -624,54 +624,4 @@ ul {
     /* identical to box height, 30px or 187% */
     letter-spacing: 0.03em;
     color: var(--text-light-color);
-}
-
-/* ==== Раздел для тренировок ====  */
-.temp-container {
-    display: flex;
-}
-
-.temp-item {
-    margin-left: 10px;
-}
-.temp-button {
-    display: block;
-    max-width: 100px;
-    max-height: 100px;
-    margin: 0;
-    padding: 20px;
-    border: 1px solid tomato;
-    /* border-radius: 50%; */
-    color: yellow;
-    background-color: yellowgreen;
-    cursor: pointer;
-}
-
-.temp-link {
-    display: block;
-    max-width: 100px;
-    max-height: 100px;
-    margin: 0;
-    padding: 20px;
-    border: 1px solid tomato;
-    border-radius: 50%;
-    color: yellow;
-    background-color: yellowgreen;
-    cursor: pointer;
-}
-
-.temp-icon {
-    width: 60px;
-    height: 60px;
-    fill: currentColor;
-}
-
-.temp-icon-link {
-    fill: currentColor;
-}
-
-.temp-button:hover,
-.temp-link:hover {
-    color: yellowgreen;
-    background-color: yellow;
 }
